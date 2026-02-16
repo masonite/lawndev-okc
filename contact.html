@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contact Us | LawnDev OKC</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#11d411",
+                "background-light": "#f6f8f6",
+                "background-dark": "#102210",
+                "slate-accent": "#1a2e1a",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk"]
+              },
+            },
+          },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #102210;
+            color: #f6f8f6;
+        }
+        .glass-nav {
+            background: rgba(16, 34, 16, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(17, 212, 17, 0.1);
+        }
+        .contact-card {
+            background: rgba(26, 46, 26, 0.6);
+            border: 1px solid rgba(17, 212, 17, 0.2);
+            transition: all 0.3s ease;
+        }
+        .contact-card:hover {
+            border-color: #11d411;
+        }
+        input, textarea {
+            background: rgba(26, 46, 26, 0.4);
+            border: 1px solid rgba(17, 212, 17, 0.3);
+        }
+        input:focus, textarea:focus {
+            border-color: #11d411;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(17, 212, 17, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-background-dark text-white">
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 left-0 right-0 z-50 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-primary">LawnDev<span class="text-white">OKC</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-primary transition">Home</a>
+                <a href="services.html" class="hover:text-primary transition">Services</a>
+                <a href="portfolio.html" class="hover:text-primary transition">Portfolio</a>
+                <a href="pricing.html" class="hover:text-primary transition">Pricing</a>
+                <a href="about.html" class="hover:text-primary transition">About</a>
+                <a href="contact.html" class="text-primary font-semibold">Contact</a>
+            </div>
+            <a href="contact.html" class="bg-primary text-background-dark px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Get Quote</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
+            <p class="text-xl text-gray-300 max-w-3xl mb-12">
+                Ready to grow your lawn care business? Let's discuss how we can help you attract more customers and increase your revenue.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8">Send Us a Message</h2>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-300 mb-2">First Name *</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-300 mb-2">Last Name *</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Email *</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-lg">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Business Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Service Interested In</label>
+                            <select class="w-full px-4 py-3 rounded-lg">
+                                <option value="">Select a service</option>
+                                <option value="website">Website Development</option>
+                                <option value="seo">Local SEO</option>
+                                <option value="social">Social Media Management</option>
+                                <option value="email">Email Marketing</option>
+                                <option value="ppc">PPC Advertising</option>
+                                <option value="full">Full Package</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Message *</label>
+                            <textarea rows="5" class="w-full px-4 py-3 rounded-lg" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-background-dark py-3 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8">Get In Touch</h2>
+                    
+                    <!-- Contact Cards -->
+                    <div class="space-y-6 mb-12">
+                        <div class="contact-card rounded-xl p-6">
+                            <div class="flex items-start">
+                                <div class="text-primary text-2xl mr-4">📍</div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Our Location</h3>
+                                    <p class="text-gray-300">Oklahoma City, OK</p>
+                                    <p class="text-gray-300 text-sm">Serving the entire OKC metro area</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-card rounded-xl p-6">
+                            <div class="flex items-start">
+                                <div class="text-primary text-2xl mr-4">📧</div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Email Us</h3>
+                                    <p class="text-gray-300">hello@lawndev.com</p>
+                                    <p class="text-gray-300 text-sm">Typically respond within 2 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-card rounded-xl p-6">
+                            <div class="flex items-start">
+                                <div class="text-primary text-2xl mr-4">📞</div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Call Us</h3>
+                                    <p class="text-gray-300">(405) 555-LAWN</p>
+                                    <p class="text-gray-300 text-sm">Mon-Fri 9am-6pm CST</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Consultation Info -->
+                    <div class="bg-slate-accent rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-4">Free Consultation</h3>
+                        <p class="text-gray-300 mb-6">
+                            Schedule a free 30-minute consultation to discuss your lawn care business goals and how we can help you achieve them.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <span class="text-primary mr-3">✓</span>
+                                <span>No obligation, no pressure</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-primary mr-3">✓</span>
+                                <span>Custom strategy for your business</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-primary mr-3">✓</span>
+                                <span>Pricing transparency</span>
+                            </div>
+                        </div>
+                        <a href="#" class="inline-block mt-6 border border-primary text-primary px-6 py-2 rounded-lg hover:bg-primary hover:text-background-dark transition">
+                            Schedule Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-6 bg-slate-accent">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Common Questions</h2>
+            <div class="space-y-6">
+                <div class="bg-background-dark p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-3">How soon will you respond to my inquiry?</h3>
+                    <p class="text-gray-300">We typically respond to all inquiries within 2 hours during business hours (9am-6pm CST, Mon-Fri).</p>
+                </div>
+                <div class="bg-background-dark p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-3">Do you offer free consultations?</h3>
+                    <p class="text-gray-300">Yes! We offer free 30-minute consultations to discuss your business goals and how we can help.</p>
+                </div>
+                <div class="bg-background-dark p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-3">What information should I have ready?</h3>
+                    <p class="text-gray-300">Just your business name, current challenges, and goals. We'll handle the rest during our consultation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">LawnDevOKC</h3>
+                    <p class="text-gray-300">Digital solutions for Oklahoma City lawn care businesses.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition">Website Development</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition">Local SEO</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition">Social Media</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-primary transition">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-primary transition">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-primary transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-300">Oklahoma City, OK</p>
+                    <p class="text-gray-300">hello@lawndev.com</p>
+                    <p class="text-gray-300">(405) 555-LAWN</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 LawnDevOKC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

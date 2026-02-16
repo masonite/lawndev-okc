@@ -1,0 +1,21 @@
+# GitHub Pages Configuration for LawnDevOKC
+# Disable Jekyll processing for static HTML site
+
+title: LawnDevOKC - Oklahoma City Lawn Care Websites
+description: Professional website development for lawn care and landscaping businesses in Oklahoma City
+baseurl: "" # Leave empty for root domain
+url: "https://masonite.github.io/lawndev-okc"
+
+# Disable Jekyll processing (we're using static HTML)
+include: [".html", ".htm"]
+exclude: ["README.md", "LICENSE", "node_modules", "vendor"]
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Custom settings
+lawncare_okc: true
+service_area: "Oklahoma City Metro"
+year: 2024
