@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pricing | LawnDev OKC</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#11d411",
+                "background-light": "#f6f8f6",
+                "background-dark": "#102210",
+                "slate-accent": "#1a2e1a",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk"]
+              },
+            },
+          },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #102210;
+            color: #f6f8f6;
+        }
+        .glass-nav {
+            background: rgba(16, 34, 16, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(17, 212, 17, 0.1);
+        }
+        .pricing-card {
+            background: rgba(26, 46, 26, 0.6);
+            border: 1px solid rgba(17, 212, 17, 0.2);
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            border-color: #11d411;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(17, 212, 17, 0.15);
+        }
+        .pricing-card.popular {
+            border: 2px solid #11d411;
+            position: relative;
+        }
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #11d411;
+            color: #102210;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-background-dark text-white">
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 left-0 right-0 z-50 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-primary">LawnDev<span class="text-white">OKC</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-primary transition">Home</a>
+                <a href="services.html" class="hover:text-primary transition">Services</a>
+                <a href="portfolio.html" class="hover:text-primary transition">Portfolio</a>
+                <a href="pricing.html" class="text-primary font-semibold">Pricing</a>
+                <a href="about.html" class="hover:text-primary transition">About</a>
+                <a href="contact.html" class="hover:text-primary transition">Contact</a>
+            </div>
+            <a href="contact.html" class="bg-primary text-background-dark px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Get Quote</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Simple, Transparent Pricing</h1>
+            <p class="text-xl text-gray-300 max-w-3xl mb-12">
+                Choose the perfect package for your lawn care business. All plans include our Oklahoma City market expertise.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="pricing-card rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-4">Starter</h3>
+                    <p class="text-gray-300 mb-6">Perfect for new lawn care businesses</p>
+                    <div class="mb-8">
+                        <span class="text-5xl font-bold">$1,499</span>
+                        <span class="text-gray-300">one-time</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> Custom Website Design</li>
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> Mobile Responsive</li>
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> Contact Form</li>
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> Basic SEO Setup</li>
+                        <li class="flex items-center"><span class="text-gray-400 mr-3">✗</span> Google Business Setup</li>
+                        <li class="flex items-center"><span class="text-gray-400 mr-3">✗</span> Social Media Integration</li>
+                        <li class="flex items-center"><span class="text-gray-400 mr-3">✗</span> Monthly Maintenance</li>
+                    </ul>
+                    <a href="contact.html" class="block w-full border border-primary text-primary text-center py-3 rounded-lg hover:bg-primary hover:text-background-dark transition">Get Started</a>
+                </div>
+
+                <!-- Popular Plan -->
+                <div class="pricing-card popular rounded-2xl p-8">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <h3 class="text-2xl font-bold mb-4">Growth</h3>
+                    <p class="text-gray-300 mb-6">Best value for growing businesses</p>
+                    <div class="mb-8">
+                        <span class="text-5xl font-bold">$2,999</span>
+                        <span class="text-gray-300">one-time</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> Everything in Starter</li>
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> Google Business Setup</li>
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> Social Media Integration</li>
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> Local SEO Optimization</li>
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> Email Marketing Setup</li>
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> 3 Months Support</li>
+                        <li class="flex items-center"><span class="text-gray-400 mr-3">✗</span> Monthly Maintenance</li>
+                    </ul>
+                    <a href="contact.html" class="block w-full bg-primary text-background-dark text-center py-3 rounded-lg font-semibold hover:bg-opacity-90 transition">Choose Growth</a>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="pricing-card rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-4">Premium</h3>
+                    <p class="text-gray-300 mb-6">Complete digital presence solution</p>
+                    <div class="mb-8">
+                        <span class="text-5xl font-bold">$499</span>
+                        <span class="text-gray-300">/month</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> Everything in Growth</li>
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> Monthly Website Updates</li>
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> Social Media Management</li>
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> Monthly SEO Reports</li>
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> PPC Campaign Management</li>
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> 24/7 Priority Support</li>
+                        <li class="flex items-center"><span class="text-primary mr-3">✓</span> Monthly Performance Review</li>
+                    </ul>
+                    <a href="contact.html" class="block w-full border border-primary text-primary text-center py-3 rounded-lg hover:bg-primary hover:text-background-dark transition">Go Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-ons Section -->
+    <section class="py-16 px-6 bg-slate-accent">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Additional Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-background-dark p-6 rounded-xl">
+                    <div class="text-primary text-2xl mb-4">🎯</div>
+                    <h4 class="font-bold mb-2">PPC Campaign Setup</h4>
+                    <p class="text-gray-300 text-sm mb-4">Google & Facebook ads targeting OKC</p>
+                    <div class="text-primary font-bold">$999 setup</div>
+                </div>
+                <div class="bg-background-dark p-6 rounded-xl">
+                    <div class="text-primary text-2xl mb-4">📧</div>
+                    <h4 class="font-bold mb-2">Email Sequence</h4>
+                    <p class="text-gray-300 text-sm mb-4">5-email automated sequence</p>
+                    <div class="text-primary font-bold">$499</div>
+                </div>
+                <div class="bg-background-dark p-6 rounded-xl">
+                    <div class="text-primary text-2xl mb-4">📱</div>
+                    <h4 class="font-bold mb-2">Mobile App</h4>
+                    <p class="text-gray-300 text-sm mb-4">Customer booking app</p>
+                    <div class="text-primary font-bold">$3,999</div>
+                </div>
+                <div class="bg-background-dark p-6 rounded-xl">
+                    <div class="text-primary text-2xl mb-4">📊</div>
+                    <h4 class="font-bold mb-2">Analytics Dashboard</h4>
+                    <p class="text-gray-300 text-sm mb-4">Real-time performance tracking</p>
+                    <div class="text-primary font-bold">$299/month</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="border-b border-gray-700 pb-6">
+                    <h3 class="text-xl font-bold mb-3">How long does website development take?</h3>
+                    <p class="text-gray-300">Starter websites typically take 7-10 business days. Growth packages take 10-14 days. Premium ongoing services begin immediately after setup.</p>
+                </div>
+                <div class="border-b border-gray-700 pb-6">
+                    <h3 class="text-xl font-bold mb-3">Do you offer payment plans?</h3>
+                    <p class="text-gray-300">Yes! We offer 3-month payment plans for one-time fees with 0% interest. Monthly plans are billed automatically.</p>
+                </div>
+                <div class="border-b border-gray-700 pb-6">
+                    <h3 class="text-xl font-bold mb-3">What's included in "Local SEO Optimization"?</h3>
+                    <p class="text-gray-300">Google Business setup, local directory listings, citation building, review management, and map optimization specifically for Oklahoma City.</p>
+                </div>
+                <div class="border-b border-gray-700 pb-6">
+                    <h3 class="text-xl font-bold mb-3">Can I upgrade my plan later?</h3>
+                    <p class="text-gray-300">Absolutely! You can upgrade at any time. We'll prorate any differences and transition you seamlessly.</p>
+                </div>
+                <div class="pb-6">
+                    <h3 class="text-xl font-bold mb-3">Do you work with businesses outside Oklahoma City?</h3>
+                    <p class="text-gray-300">While we specialize in OKC, we work with lawn care businesses throughout Oklahoma. Additional research may be required for other markets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-6 bg-slate-accent">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Not Sure Which Plan Is Right?</h2>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Schedule a free 30-minute consultation. We'll analyze your business and recommend the perfect solution.
+            </p>
+            <a href="contact.html" class="inline-block bg-primary text-background-dark px-8 py-3 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition">Book Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">LawnDevOKC</h3>
+                    <p class="text-gray-300">Digital solutions for Oklahoma City lawn care businesses.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition">Website Development</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition">Local SEO</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition">Social Media</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-primary transition">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-primary transition">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-primary transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-300">Oklahoma City, OK</p>
+                    <p class="text-gray-300">hello@lawndev.com</p>
+                    <p class="text-gray-300">(405) 555-LAWN</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 LawnDevOKC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
