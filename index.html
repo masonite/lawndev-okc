@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>LawnDev OKC Metro Focus | Localized Modern Design</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#11d411",
+                "background-light": "#f6f8f6",
+                "background-dark": "#102210",
+                "slate-accent": "#1a2e1a",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #102210;
+            color: #f6f8f6;
+        }
+        .glass-nav {
+            background: rgba(16, 34, 16, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(17, 212, 17, 0.1);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(16, 34, 16, 0.7), rgba(16, 34, 16, 1));
+        }
+        .map-container {
+            position: relative;
+            background: #0a1a0a;
+            border: 1px solid rgba(17, 212, 17, 0.2);
+        }
+        .glow-pin {
+            box-shadow: 0 0 15px #11d411;
+        }
+        .premium-card {
+            background: rgba(26, 46, 26, 0.5);
+            border: 1px solid rgba(17, 212, 17, 0.1);
+            transition: all 0.3s ease;
+        }
+        .premium-card:hover {
+            border-color: #11d411;
+            transform: translateY(-4px);
+        }
+        
+        /* Mobile-specific improvements */
+        @media (max-width: 640px) {
+            .mobile-padding {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .mobile-text {
+                font-size: 1.875rem !important; /* text-3xl */
+            }
+            .mobile-stack {
+                flex-direction: column !important;
+            }
+            .mobile-center {
+                text-align: center !important;
+            }
+        }
+        
+        /* Responsive image handling */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 md:h-20 flex items-center justify-between mobile-padding">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+                    <span class="material-icons text-background-dark text-xl font-bold">grass</span>
+                </div>
+                <span class="text-xl md:text-2xl font-bold tracking-tight">LAWN<span class="text-primary">DEV</span></span>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-white" id="mobile-menu-button">
+                <span class="material-icons text-2xl">menu</span>
+            </button>
+            
+            <!-- Desktop menu -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-wider">
+                <a class="hover:text-primary transition-colors" href="#">Services</a>
+                <a class="hover:text-primary transition-colors" href="#">OKC Portfolio</a>
+                <a class="hover:text-primary transition-colors" href="#">Pricing</a>
+                <a class="hover:text-primary transition-colors" href="#">About</a>
+            </div>
+            
+            <button class="hidden md:block bg-primary hover:bg-primary/90 text-background-dark px-6 py-2.5 rounded font-bold transition-all">
+                FREE SITE AUDIT
+            </button>
+        </div>
+        
+        <!-- Mobile menu (hidden by default) -->
+        <div class="md:hidden hidden bg-background-dark border-t border-white/10" id="mobile-menu">
+            <div class="px-4 py-4 space-y-4">
+                <a class="block hover:text-primary transition-colors py-2" href="#">Services</a>
+                <a class="block hover:text-primary transition-colors py-2" href="#">OKC Portfolio</a>
+                <a class="block hover:text-primary transition-colors py-2" href="#">Pricing</a>
+                <a class="block hover:text-primary transition-colors py-2" href="#">About</a>
+                <button class="w-full bg-primary hover:bg-primary/90 text-background-dark px-6 py-3 rounded font-bold transition-all mt-4">
+                    FREE SITE AUDIT
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-16 md:pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- Placeholder for hero image -->
+            <div class="w-full h-full bg-gradient-to-br from-background-dark to-slate-accent"></div>
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8 md:gap-12 items-center mobile-padding">
+            <div class="mobile-center">
+                <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-full text-primary text-sm font-semibold mb-6">
+                    <span class="material-icons text-sm">location_on</span>
+                    OKC METRO SPECIALISTS
+                </div>
+                
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 mobile-text">
+                    The <span class="text-primary italic">#1</span> Web Agency for OKC & Edmond Landscapers
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-300 mb-8 md:mb-10 max-w-xl mx-auto md:mx-0">
+                    We build high-performance websites that dominate local search and turn Oklahoma homeowners into lifelong recurring customers.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-primary hover:bg-primary/90 text-background-dark px-8 py-4 rounded font-bold text-lg transition-all">
+                        Get Your Free Audit
+                    </button>
+                    <button class="border-2 border-primary text-primary hover:bg-primary/10 px-8 py-4 rounded font-bold text-lg transition-all">
+                        View OKC Case Studies
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hidden lg:block">
+                <!-- Stats or image placeholder -->
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+                    <div class="text-center">
+                        <div class="text-6xl font-bold text-primary mb-2">94%</div>
+                        <div class="text-xl">OKC landscapers with outdated sites</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 md:py-24 bg-background-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 mobile-padding">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">What We Build for OKC Landscapers</h2>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto">Specialized solutions for the unique challenges of the Oklahoma City landscaping market.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Service 1 -->
+                <div class="premium-card p-6 md:p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6">
+                        <span class="material-icons text-primary text-2xl">search</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Local SEO Domination</h3>
+                    <p class="text-slate-300">Rank #1 for "landscaping near me" in your Oklahoma City service area.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="premium-card p-6 md:p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6">
+                        <span class="material-icons text-primary text-2xl">phone_iphone</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Mobile-First Design</h3>
+                    <p class="text-slate-300">90% of homeowners search on phones. We build for mobile conversion.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="premium-card p-6 md:p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6">
+                        <span class="material-icons text-primary text-2xl">attach_money</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Lead Capture Systems</h3>
+                    <p class="text-slate-300">Automated quote requests, booking, and follow-up for maximum conversions.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="premium-card p-6 md:p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6">
+                        <span class="material-icons text-primary text-2xl">speed</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Blazing Fast Sites</h3>
+                    <p class="text-slate-300">Google rewards fast sites. We optimize for speed and performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center mobile-padding">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8 text-background-dark">Ready to Dominate the OKC Market?</h2>
+            <p class="text-xl md:text-2xl mb-10 text-background-dark/90 max-w-3xl mx-auto">Get a free website audit and discover exactly how much business you're losing to competitors with better online presence.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
+                <button class="bg-background-dark hover:bg-black text-white px-8 py-4 rounded font-bold text-lg transition-all">
+                    Free OKC Website Audit
+                </button>
+                <button class="border-2 border-background-dark text-background-dark hover:bg-background-dark/10 px-8 py-4 rounded font-bold text-lg transition-all">
+                    Call (405) 555-LAWN
+                </button>
+            </div>
+            
+            <p class="mt-8 text-background-dark/70">Serving Oklahoma City, Edmond, Norman, Moore & surrounding areas</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 mobile-padding">
+            <div class="grid md:grid-cols-4 gap-8 md:gap-12 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+                            <span class="material-icons text-background-dark text-xl font-bold">grass</span>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight">LAWN<span class="text-primary">DEV</span></span>
+                    </div>
+                    <p class="text-slate-400">The #1 web agency for Oklahoma City landscaping businesses.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">Website Design</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Local SEO</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Content Marketing</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Lead Generation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">OKC Areas</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>Oklahoma City</li>
+                        <li>Edmond</li>
+                        <li>Norman</li>
+                        <li>Moore</li>
+                        <li>Yukon</li>
+                        <li>Mustang</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>hello@lawndev.com</li>
+                        <li>(405) 555-LAWN</li>
+                        <li>Oklahoma City, OK</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                <div>© 2024 LawnDev. All rights reserved.</div>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

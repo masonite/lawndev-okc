@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>About Us | LawnDev OKC</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#11d411",
+                "background-light": "#f6f8f6",
+                "background-dark": "#102210",
+                "slate-accent": "#1a2e1a",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk"]
+              },
+            },
+          },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #102210;
+            color: #f6f8f6;
+        }
+        .glass-nav {
+            background: rgba(16, 34, 16, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(17, 212, 17, 0.1);
+        }
+        .team-card {
+            background: rgba(26, 46, 26, 0.6);
+            border: 1px solid rgba(17, 212, 17, 0.2);
+            transition: all 0.3s ease;
+        }
+        .team-card:hover {
+            border-color: #11d411;
+            transform: translateY(-4px);
+        }
+        .value-card {
+            background: rgba(26, 46, 26, 0.4);
+            border-left: 4px solid #11d411;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-background-dark text-white">
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 left-0 right-0 z-50 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-primary">LawnDev<span class="text-white">OKC</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-primary transition">Home</a>
+                <a href="services.html" class="hover:text-primary transition">Services</a>
+                <a href="portfolio.html" class="hover:text-primary transition">Portfolio</a>
+                <a href="pricing.html" class="hover:text-primary transition">Pricing</a>
+                <a href="about.html" class="text-primary font-semibold">About</a>
+                <a href="contact.html" class="hover:text-primary transition">Contact</a>
+            </div>
+            <a href="contact.html" class="bg-primary text-background-dark px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Get Quote</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">About LawnDevOKC</h1>
+            <p class="text-xl text-gray-300 max-w-3xl mb-12">
+                We're Oklahoma City's premier digital agency specializing in lawn care and landscaping businesses. We understand your industry because we've worked in it.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Our Story</h2>
+                    <p class="text-gray-300 mb-6">
+                        Founded in 2023, LawnDevOKC was born from a simple observation: most lawn care businesses in Oklahoma City had outdated websites that didn't reflect the quality of their work.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        Our founder, a former landscape business owner, saw firsthand how a professional online presence could transform a local service business. After helping several friends in the industry update their websites and seeing their businesses grow, LawnDevOKC was created to serve the entire Oklahoma City metro.
+                    </p>
+                    <p class="text-gray-300">
+                        Today, we've helped over 50 lawn care and landscaping businesses across Oklahoma City, Edmond, Norman, and surrounding areas establish a professional digital presence that attracts more customers and increases revenue.
+                    </p>
+                </div>
+                <div class="bg-slate-accent rounded-2xl p-8">
+                    <div class="text-primary text-6xl mb-6">🌱</div>
+                    <h3 class="text-2xl font-bold mb-4">Why We're Different</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-primary mr-3 mt-1">✓</span>
+                            <span>Founded by former lawn care business owner</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-3 mt-1">✓</span>
+                            <span>Specialized in Oklahoma City market</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-3 mt-1">✓</span>
+                            <span>Understand seasonal lawn care needs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-3 mt-1">✓</span>
+                            <span>Focus on measurable business results</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="py-16 px-6 bg-slate-accent">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Values</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="value-card p-8 rounded-xl">
+                    <div class="text-primary text-4xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold mb-4">Local Expertise</h3>
+                    <p class="text-gray-300">
+                        We understand Oklahoma City's unique lawn care market, weather patterns, and customer expectations. Our solutions are tailored specifically for this region.
+                    </p>
+                </div>
+                <div class="value-card p-8 rounded-xl">
+                    <div class="text-primary text-4xl mb-4">🤝</div>
+                    <h3 class="text-2xl font-bold mb-4">Partnership Approach</h3>
+                    <p class="text-gray-300">
+                        We're not just service providers; we're business partners. Your success is our success, and we're invested in helping your business grow.
+                    </p>
+                </div>
+                <div class="value-card p-8 rounded-xl">
+                    <div class="text-primary text-4xl mb-4">📈</div>
+                    <h3 class="text-2xl font-bold mb-4">Results-Driven</h3>
+                    <p class="text-gray-300">
+                        We measure success by the growth of your business. More leads, higher conversion rates, and increased revenue are what matter to us.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12">Meet Our Team</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="team-card rounded-2xl p-8 text-center">
+                    <div class="w-32 h-32 bg-slate-accent rounded-full mx-auto mb-6 flex items-center justify-center text-4xl">👨‍💼</div>
+                    <h3 class="text-2xl font-bold mb-2">Mark Thompson</h3>
+                    <p class="text-primary font-semibold mb-4">Founder & CEO</p>
+                    <p class="text-gray-300">
+                        Former landscape business owner with 15+ years in the industry. Founded LawnDevOKC to help other lawn care businesses succeed online.
+                    </p>
+                </div>
+                <div class="team-card rounded-2xl p-8 text-center">
+                    <div class="w-32 h-32 bg-slate-accent rounded-full mx-auto mb-6 flex items-center justify-center text-4xl">👩‍💻</div>
+                    <h3 class="text-2xl font-bold mb-2">Sarah Johnson</h3>
+                    <p class="text-primary font-semibold mb-4">Lead Developer</p>
+                    <p class="text-gray-300">
+                        Web development specialist with expertise in mobile-responsive design and SEO. Creates fast, beautiful websites that convert visitors.
+                    </p>
+                </div>
+                <div class="team-card rounded-2xl p-8 text-center">
+                    <div class="w-32 h-32 bg-slate-accent rounded-full mx-auto mb-6 flex items-center justify-center text-4xl">👨‍🎨</div>
+                    <h3 class="text-2xl font-bold mb-2">David Chen</h3>
+                    <p class="text-primary font-semibold mb-4">Marketing Director</p>
+                    <p class="text-gray-300">
+                        Digital marketing expert specializing in local SEO and social media for service businesses. Helps clients get found by local customers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 px-6 bg-slate-accent">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-primary mb-2">50+</div>
+                    <div class="text-gray-300">Lawn Care Businesses Helped</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-primary mb-2">240%</div>
+                    <div class="text-gray-300">Average Lead Increase</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-primary mb-2">98%</div>
+                    <div class="text-gray-300">Client Satisfaction Rate</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-primary mb-2">24/7</div>
+                    <div class="text-gray-300">Support Availability</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Ready to Work With Experts?</h2>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Partner with a team that understands your business and is committed to your growth.
+            </p>
+            <a href="contact.html" class="inline-block bg-primary text-background-dark px-8 py-3 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition">Start Partnership</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">LawnDevOKC</h3>
+                    <p class="text-gray-300">Digital solutions for Oklahoma City lawn care businesses.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition">Website Development</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition">Local SEO</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-primary transition">Social Media</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-primary transition">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-primary transition">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-primary transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-300">Oklahoma City, OK</p>
+                    <p class="text-gray-300">hello@lawndev.com</p>
+                    <p class="text-gray-300">(405) 555-LAWN</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 LawnDevOKC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
